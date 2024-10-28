@@ -1,9 +1,3 @@
----
-title: "README for Gene Expression Statistical Analysis Project"
-author: "Rishwanth Mithra"
-date: "`r Sys.Date()`"
-output: github_document
----
 
 # Introduction
 This document outlines the workflow and methods used for analyzing a gene expression dataset with both supervised and unsupervised machine learning techniques. The analysis aims to classify samples based on gene expression levels and predict patient predisposition to invasive or non-invasive forms of cancer.
@@ -23,3 +17,9 @@ library(randomForest)
 library(e1071)
 library(caret)
 library(class)
+
+## 1. Data Preparation
+Load the gene expression dataset (your_dataset.csv) and conduct an initial review:
+
+Identify and handle missing values.
+Use k-NN imputation for filling missing entries, as it produced the lowest misclassification error during model testing.
