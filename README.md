@@ -17,9 +17,19 @@ library(randomForest)
 library(e1071)
 library(caret)
 library(class)
+```
 
-## 1. Data Preparation
+## Data Preparation
 Load the gene expression dataset (your_dataset.csv) and conduct an initial review:
 
-Identify and handle missing values.
-Use k-NN imputation for filling missing entries, as it produced the lowest misclassification error during model testing.
+1.Identify and handle missing values.
+2.Use k-NN imputation for filling missing entries, as it produced the lowest misclassification error during model testing.
+
+{r
+# Load dataset and check dimensions
+InitialData <- read.csv("your_dataset.csv")
+str(InitialData)
+
+# Handle missing values using k-NN Imputation
+InitialData <- knnImputation(InitialData)
+}
