@@ -19,7 +19,7 @@ library(caret)
 library(class)
 ```
 
-## Data Preparation
+## 1. Data Preparation
 Load the gene expression dataset and conduct an initial review:
 
 1.Identify and handle missing values.
